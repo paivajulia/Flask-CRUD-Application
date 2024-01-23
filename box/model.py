@@ -7,7 +7,7 @@ class BoxModel(db.Model):
  
     id = db.Column(db.Integer, primary_key=True)
     box_id = db.Column(db.Integer(),unique = True)
-    name_box = db.Column(db.String())
+    name_box = db.Column(db.String(80))
     size_box = db.Column(db.String(80))
     description_box = db.Column(db.String())
  
@@ -18,4 +18,4 @@ class BoxModel(db.Model):
         self.description_box = description_box
  
     def __repr__(self):
-        return f"{self.name}:{self.box_id}"
+        return f"{self.name_box}:{self.box_id}"
